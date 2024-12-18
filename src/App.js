@@ -1,10 +1,20 @@
 
+import { Router } from 'react-router';
 import './App.css';
+import'./Components/Home/Home'
+import Home from './Components/Home/Home';
 
-function app (){
+function App (){
   return(
-    <div className='App'>
-      <h1>hi</h1>
+    <div>
+      <Home></Home>
+     <React.Fragment>
+      <Router>
+        <Route path="./mainhome" element={<home/>}/>
+        <Route path="./" element={<home/>}/>
+
+      </Router>
+     </React.Fragment>
     </div>
   )
 }
