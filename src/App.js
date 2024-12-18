@@ -11,8 +11,8 @@ function App (){
      <React.Fragment>
       <Router>
         <Route path="./mainhome" element={<home/>}/>
-        <Route path="./" element={<home/>}/>
-
+        <Route path="./adduser" element={<User/>}/>
+        <Route path="./userdetails" element={<uERS/>}/>
       </Router>
      </React.Fragment>
     </div>
