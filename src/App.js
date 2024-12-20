@@ -12,7 +12,7 @@ function App (){
       <Router>
         <Route path="./mainhome" element={<home/>}/>
         <Route path="./adduser" element={<User/>}/>
-        <Route path="./userdetails" element={<uERS/>}/>
+        <Route path="./userdetails/:id" element={<updateuERS/>}/>
       </Router>
      </React.Fragment>
     </div>
