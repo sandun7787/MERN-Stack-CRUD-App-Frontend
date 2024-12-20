@@ -31,10 +31,45 @@ const updateUser = () => {
             adddress:String(inputs,adddress),
         }
 
+        .then((res)=>res.data);
+
     };
+
+    const handleChange =(e)=>{
+        setinputs((preveStaet)=>({
+            ...preveStaet,
+            [e.target.name]:e.target.value,
+        }));
+    };
+
+    const handleSubmit = async (e) =>{
+        e.preventDefault();
+        console.log(inputs);
+        sendRequest() . then(()=>
+        history("/userDetails"));
+    }
   return (
     <div>
-      <h1>User Update</h1>
+        <div>Update User Details</div>
+            <form onSubmit={handleSubmit}>
+          <label>name</label>
+          <br/>
+          <input type="text" onChange={handleChange} name="name" value={inputs .name} required></input>
+          <br></br>
+          <label>gmail</label>
+          <input type="gmail" name="gmail" onChange={handleChange}  value={inputs .gmail} required> </input>
+          <br>
+          </br>
+          <label>age</label>
+          <input type="age" name="age" onChange={handleChange} required value={inputs .age}> </input>
+          <br>
+          </br>
+          <label>address</label>
+          <input type="address" name="address" onChange={handleChange} required value={inputs .address}> </input>
+          <br>
+          </br>
+
+        </form>
     </div>
   )
 }
